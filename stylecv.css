@@ -13,10 +13,11 @@ html {
 .logo {
     position: fixed;
     float: left;
+
     margin: 16px 36px;
     color: white;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
 
 }
 
