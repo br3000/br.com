@@ -9,7 +9,7 @@ window.addEventListener("scroll", function() {
     nav.style.opacity = opacity;
 
     // Ajoutez ou supprimez la classe "black" en fonction de la position de défilement
-    if (scrollPosition > 1000) {
+    if (scrollPosition > 350) {
         nav.classList.add("black");
     } else {
         nav.classList.remove("black");
@@ -21,10 +21,10 @@ window.addEventListener("scroll", function() {
     var image1 = document.getElementById("B");
     var image2 = document.getElementById("R");
 
-    // Calculate the separation distance based on scroll position
-    var separation = scrollPosition / 5; // You can adjust the divisor for the desired effect
+    
+    var separation = scrollPosition / 5; 
 
-    // Apply the transformation to each image
+    
     image1.style.transform = "translateX(-" + separation + "px)";
     image2.style.transform = "translateX(" + separation + "px)";
 });
