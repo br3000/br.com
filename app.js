@@ -28,3 +28,39 @@ window.addEventListener("scroll", function() {
     image1.style.transform = "translateX(-" + separation + "px)";
     image2.style.transform = "translateX(" + separation + "px)";
 });
+function showTimeline(timelineType) {
+    const scolaireTimeline = document.getElementById('timeline-scolaire');
+    const proTimeline = document.getElementById('timeline-pro');
+
+    if (timelineType === 'scolaire') {
+        scolaireTimeline.classList.remove('hidden');
+        proTimeline.classList.add('hidden');
+    } else if (timelineType === 'pro') {
+        proTimeline.classList.remove('hidden');
+        scolaireTimeline.classList.add('hidden');
+    }
+}
+var modal = document.getElementById("myModal");
+                var modalImg = document.getElementById("modalImage");
+                var span = document.getElementsByClassName("close")[0];
+
+                // Lorsque l'utilisateur clique sur une cellule avec une image
+                document.querySelectorAll('.image-cell').forEach(function (cell) {
+                    cell.addEventListener('click', function () {
+                        var imgSrc = this.getAttribute('data-image');
+                        modalImg.src = imgSrc;
+                        modal.style.display = "block";
+                    });
+                });
+
+                // Lorsque l'utilisateur clique sur la croix pour fermer
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // Lorsque l'utilisateur clique n'importe où en dehors du modal, fermer le modal
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
